@@ -1,0 +1,115 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block content %}
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <div class="thumb">
+                            <div class="inner-content">
+                                <h4>Кеди</h4>
+                                <div class="main-border-button">
+                                    <a href="#">Переглянути товари</a>
+                                </div>
+                            </div>
+                            <img src="{% static 'images/keds_1.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+<!--                                        <div class="inner-content">-->
+<!--                                            <h4>Кросівки</h4>-->
+<!--                                        </div>-->
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Кросівки</h4>
+                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="{% static 'images/snickers_2.png' %}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Men</h4>
+                                            <span>Best Clothes For Men</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Men</h4>
+                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="{% static 'images/baner-right-image-02.jpg' %}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Kids</h4>
+                                            <span>Best Clothes For Kids</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Kids</h4>
+                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="{% static 'images/baner-right-image-03.jpg' %}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>Accessories</h4>
+                                            <span>Best Trend Accessories</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>Accessories</h4>
+                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="{% static 'images/baner-right-image-04.jpg' %}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    {% include "blocks/new-shoes.html" %}
+    {% include "blocks/top-shoes.html" %}
+
+{% endblock content %}
