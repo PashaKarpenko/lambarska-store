@@ -1,0 +1,19 @@
+{% load static %}
+<div class="item">
+  <div class="thumb overflow-hidden">
+    <a href="{% url 'shoe_detail' shoe.pk %}">
+      <img src="{{ shoe.image.url }}" alt="{{ shoe.name }}" title="{{ shoe.name }}" class="img-fluid img-hover-zoom">
+    </a>
+  </div>
+  <div class="down-content card-body p-2">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <a href="{% url 'shoe_detail' shoe.pk  %}"><h4 class="mb-1">{{ shoe.type }} {{ shoe.name }}</h4></a>
+        <span>{{ shoe.price }} ₴</span>
+      </div>
+      <div class="align-self-start">
+        <a href="#"><img src="{% static 'images/empty-basket.png' %}" alt="Cart" width="35" height="35"></a>
+      </div>
+    </div>
+  </div>
+</div>

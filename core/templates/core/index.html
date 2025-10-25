@@ -1,0 +1,73 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <div class="thumb overflow-hidden">
+                            <a href="#">
+                               <img src="{% static 'images/keds_1.png' %}" alt="Кеди" title="Кеди"
+                                    class="img-fluid img-hover-zoom">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb overflow-hidden">
+                                        <a href="#">
+                                        <img src="{% static 'images/snickers_2.png' %}" title="Кросівки"
+                                             class="img-fluid img-hover-zoom">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb overflow-hidden">
+                                        <a href="#">
+                                        <img src="{% static 'images/baner-right-image-02.jpg' %}" title="Сандалі"
+                                            class="img-fluid img-hover-zoom">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb overflow-hidden">
+                                        <a href="#">
+                                        <img src="{% static 'images/baner-right-image-03.jpg' %}" title="Капці"
+                                            class="img-fluid img-hover-zoom">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb overflow-hidden">
+                                        <a href="#">
+                                        <img src="{% static 'images/baner-right-image-04.jpg' %}" title="Чоботи"
+                                            class="img-fluid img-hover-zoom">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    {% include "blocks/new-shoes.html" %}
+    {% include "blocks/bestsellers.html" %}
+
+{% endblock content %}

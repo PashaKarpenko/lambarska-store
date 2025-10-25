@@ -1,0 +1,22 @@
+.img-hover-zoom {
+    transition: transform 0.3s ease;
+}
+
+.img-hover-zoom:hover {
+    transform: scale(1.1);
+}
+
+.fs-shoes-detail {
+  font-size: 1.1rem !important;
+}
+
+.shoes-details-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* або space-between / flex-start */
+  height: 100%; /* якщо треба зайняти всю висоту */
+}
+
+.nav li a {
+    font-size: 1.1rem !important;
+}

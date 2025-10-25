@@ -1,0 +1,31 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container my-5">
+    <h4 class="mb-4 text-center">Корзина</h4>
+    <table class="table table-bordered text-center align-middle">
+        <thead class="table-light">
+            <tr>
+                <th scope="col">Назва</th>
+                <th scope="col">Розмір взуття</th>
+                <th scope="col">Кількість</th>
+                <th scope="col">Ціна</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cart %}
+            <tr>
+                <td>{{ item.shoe.name }}</td>
+                <td>{{ item.size }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.total_price }} грн</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p>Загальна сума:  ₴</p>
+</div>
+
+{% endblock %}

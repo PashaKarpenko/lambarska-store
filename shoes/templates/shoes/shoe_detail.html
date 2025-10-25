@@ -1,0 +1,116 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="page-heading" id="top">
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+
+    <!-- ***** Product Area Starts ***** -->
+    <section class="section" id="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                <div class="left-images">
+                    {% for img in shoe.images.all %}
+                      <img src="{{ img.image.url }}" alt="{{ shoe.name }}">
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="right-content">
+                    <h4>{{ shoe.type }} {{ shoe.name }}</h4>
+                    <span class="price">{{ shoe.price }} ₴</span>
+                    <div class="px-5">
+                        <ul>
+                            <li class="d-flex justify-content-between">
+                              <span class="fs-shoes-detail text-dark">Сезон</span>
+                              <span style="font-weight: 700;" class="fs-shoes-detail text-dark">{{ shoe.season }}</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                              <span class="fs-shoes-detail text-dark">Матеріал</span>
+                              <span style="font-weight: 700;" class="fs-shoes-detail text-dark">{{ shoe.material }}</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                              <span class="fs-shoes-detail text-dark">Колір</span>
+                              <span style="font-weight: 700;" class="fs-shoes-detail text-dark">{{ shoe.color }}</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                              <span class="fs-shoes-detail text-dark">Розміри</span>
+                              <span style="font-weight: 700;" class="fs-shoes-detail text-dark">{{ shoe.size_from }} - {{ shoe.size_to }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="quantity-content">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between  flex-wrap px-5">
+                                <div class="left-content">
+                                    <h6 style="font-weight: 500;" class ="fs-shoes-detail text-dark">Оберіть розмір</h6>
+                                </div>
+                                <div class="right-content">
+                                    <select name="size" id="size-select"
+                                            class="form-select form-select-lg fs-4 w-auto px-3 py-2 rounded bg-white">
+                                        {% for size in size_range %}
+                                            <option  value="{{ size }}">{{ size }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                          <button type="button" class="btn btn-outline-dark fs-5 w-75" data-bs-toggle="modal" data-bs-target="#sizeChartModal">
+                            Розмірна сітка
+                          </button>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-outline-dark fs-5 w-75">Додати в кошик
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Product Area Ends ***** -->
+
+    <!-- ***** Modal Start ***** -->
+    <div class="modal fade" id="sizeChartModal" tabindex="-1" aria-labelledby="sizeChartLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title w-100 text-center" id="sizeChartLabel">Розмірна сітка</h5>
+          </div>
+
+          <div class="modal-body">
+            <table class="table table-bordered text-center align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>Розмір взуття</th>
+                  <th>Довжина устілки (см)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>36</td><td>23.5</td></tr>
+                <tr><td>37</td><td>24.0</td></tr>
+                <tr><td>38</td><td>24.5</td></tr>
+                <tr><td>39</td><td>25.0</td></tr>
+                <tr><td>40</td><td>25.5</td></tr>
+                <tr><td>41</td><td>26.0</td></tr>
+                <tr><td>42</td><td>26.5</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- ***** Modal Ends ***** -->
+{% endblock content %}
